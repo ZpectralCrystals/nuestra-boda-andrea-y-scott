@@ -14,7 +14,7 @@ export function CtaSection({ cta, floralIllustration }: CtaSectionProps) {
         <img
           src={floralIllustration}
           alt=""
-          className="pointer-events-none absolute -right-10 top-6 hidden w-36 opacity-25 md:block"
+          className="pointer-events-none absolute -right-16 -top-6 w-40 max-w-none opacity-20 sm:w-52 md:-right-20 md:top-0 md:w-64 lg:w-80"
         />
 
         <div className="relative mx-auto max-w-3xl">

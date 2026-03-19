@@ -129,7 +129,7 @@ export function HeroSection({
             <img
               src={assets.floralIllustration}
               alt=""
-              className="pointer-events-none absolute -left-8 -top-6 hidden w-28 opacity-70 md:block"
+              className="pointer-events-none absolute -left-16 -top-16 w-44 max-w-none opacity-75 sm:-left-20 sm:-top-20 sm:w-56 md:-left-24 md:-top-20 md:w-64 lg:-left-28 lg:-top-24 lg:w-80"
             />
             <div className="relative overflow-hidden rounded-[2.5rem] border border-white/70 bg-white/60 p-4 shadow-[var(--shadow-glow)] backdrop-blur-xl">
               <div className="relative overflow-hidden rounded-[2rem]">
