@@ -105,10 +105,10 @@ export function AudioPlayer({ audio }: AudioPlayerProps) {
     return (
       <div className="mt-6 w-full max-w-xl rounded-[1.75rem] border border-white/70 bg-white/80 p-4 shadow-[var(--shadow-card)] backdrop-blur-xl">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-sage">
+          <p className="card-kicker text-sage">
             Reproductor
           </p>
-          <p className="mt-1 font-display text-2xl leading-none text-ink">
+          <p className="card-title mt-2 text-ink">
             {audio.title}
           </p>
         </div>
@@ -274,10 +274,10 @@ function YouTubeAudioPlayer({ title, url }: YouTubeAudioPlayerProps) {
         </button>
 
         <div className="min-w-0 flex-1">
-          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-sage">
+          <p className="card-kicker text-sage">
             Reproductor
           </p>
-          <p className="truncate font-display text-2xl leading-none text-ink">
+          <p className="card-title mt-2 truncate text-ink">
             {title}
           </p>
         </div>

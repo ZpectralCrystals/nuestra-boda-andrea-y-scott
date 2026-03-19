@@ -11,13 +11,13 @@ export function StorySection({ quote, story }: StorySectionProps) {
     <section className="section-shell mt-24">
       <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="hidden rounded-[2.5rem] border border-white/70 bg-white/80 p-8 shadow-[var(--shadow-card)] backdrop-blur-xl md:p-10 lg:block">
-          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sage">
+          <p className="section-kicker text-sage">
             Nuestra inspiración
           </p>
           <blockquote className="mt-6 font-display text-4xl leading-tight text-ink md:text-5xl">
             “{quote.text}”
           </blockquote>
-          <p className="mt-5 text-sm uppercase tracking-[0.3em] text-gold">
+          <p className="meta-label mt-5 text-gold">
             {quote.citation}
           </p>
         </div>
@@ -31,10 +31,10 @@ export function StorySection({ quote, story }: StorySectionProps) {
               <div className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-sage/12 text-sage">
                 <Heart className="h-5 w-5" />
               </div>
-              <h3 className="mt-5 font-display text-3xl text-ink">
+              <h3 className="card-title mt-5 text-ink">
                 {item.title}
               </h3>
-              <p className="mt-3 text-sm leading-7 text-sage-deep/80">
+              <p className="card-copy mt-3 text-sage-deep/80">
                 {item.description}
               </p>
             </article>

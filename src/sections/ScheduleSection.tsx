@@ -34,13 +34,13 @@ export function ScheduleSection({ schedule }: ScheduleSectionProps) {
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-sage/12 text-sage">
                 <Icon className="h-5 w-5" />
               </div>
-              <p className="mt-5 text-sm font-semibold uppercase tracking-[0.35em] text-sage">
+              <p className="card-kicker mt-5 text-sage">
                 {item.time}
               </p>
-              <h3 className="mt-3 font-display text-4xl text-ink">
+              <h3 className="card-title mt-3 text-ink">
                 {item.title}
               </h3>
-              <p className="mt-4 text-sm leading-7 text-sage-deep/80">
+              <p className="card-copy mt-4 text-sage-deep/80">
                 {item.description}
               </p>
             </article>

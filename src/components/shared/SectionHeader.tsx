@@ -11,13 +11,13 @@ export function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <div className="mx-auto max-w-3xl text-center">
-      <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sage">
+      <p className="section-kicker text-sage">
         {eyebrow}
       </p>
-      <h2 className="mt-4 font-display text-4xl leading-none text-ink md:text-6xl">
+      <h2 className="section-title mt-4 text-ink">
         {title}
       </h2>
-      <p className="mt-5 text-sm leading-7 text-sage-deep/80 md:text-lg">
+      <p className="section-copy mt-4 text-sage-deep/80">
         {description}
       </p>
     </div>

@@ -2,7 +2,7 @@ import floralIllustration from '../assets/reference/floral.png'
 import galleryOne from '../assets/reference/gallery-1.jpg'
 import galleryTwo from '../assets/reference/gallery-2.jpg'
 import galleryThree from '../assets/reference/gallery-3.jpg'
-import heroImage from '../assets/reference/hero.jpg'
+import heroImage from '../assets/reference/hero-photo.jpg'
 import type { WeddingPageData } from '../types/wedding'
 
 /**
@@ -20,8 +20,8 @@ function capitalize(value: string) {
 }
 
 const eventConfig = {
-  dateIso: '2026-07-25T12:30:00-05:00',
-  time: '12:30 p. m.',
+  dateIso: '2026-07-25T10:00:00-05:00',
+  time: '10:00 p. m.',
   city: 'Arequipa, Perú',
   ceremonyVenue: 'Parroquia San Miguel Arcángel Cayma',
   receptionVenue: 'Villa Cascada',
@@ -170,7 +170,7 @@ export const weddingContent = {
    */
   schedule: [
     {
-      time: '12:30 p. m.',
+      time: '10:00 p. m.',
       title: 'Ceremonia religiosa',
       description:
         'Comenzaremos la jornada dando gracias y celebrando nuestra unión en un momento íntimo y lleno de significado.',

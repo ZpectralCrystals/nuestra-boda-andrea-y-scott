@@ -18,13 +18,13 @@ export function CtaSection({ cta, floralIllustration }: CtaSectionProps) {
         />
 
         <div className="relative mx-auto max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.4em] text-gold">
+          <p className="section-kicker text-gold">
             Confirmación
           </p>
-          <h2 className="mt-5 font-display text-5xl leading-none text-ivory md:text-6xl">
+          <h2 className="section-title mt-5 text-ivory">
             Nos encantará celebrarlo contigo
           </h2>
-          <p className="mt-5 text-base leading-7 text-white/75 md:text-lg">
+          <p className="section-copy mt-4 text-white/75">
             Tu presencia hará este día aún más especial. Gracias por acompañarnos
             con tanto cariño en una fecha que recordaremos para siempre.
           </p>
@@ -48,7 +48,7 @@ export function CtaSection({ cta, floralIllustration }: CtaSectionProps) {
             </a>
           </div>
 
-          <p className="mt-6 text-sm leading-7 text-white/65">{cta.note}</p>
+          <p className="card-copy mt-6 text-white/65">{cta.note}</p>
         </div>
       </div>
     </section>

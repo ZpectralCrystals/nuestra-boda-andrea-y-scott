@@ -20,14 +20,14 @@ export function PeopleSection({ people }: PeopleSectionProps) {
             key={person.title}
             className="rounded-[2rem] border border-white/70 bg-white/70 p-6 text-center shadow-[var(--shadow-card)] backdrop-blur-xl lg:text-left"
           >
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sage">
+            <p className="card-kicker text-sage">
               {person.title}
             </p>
             <div className="mt-5 space-y-3">
               {person.names.map((name) => (
                 <p
                   key={name}
-                  className="font-display text-2xl leading-tight text-ink"
+                  className="font-display text-[1.8rem] leading-tight text-ink md:text-[2.1rem]"
                 >
                   {name}
                 </p>

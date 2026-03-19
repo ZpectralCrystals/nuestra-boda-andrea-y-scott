@@ -43,13 +43,13 @@ export function HeroSection({
           </p>
 
           <div className="mt-5 space-y-1 md:mt-6 md:space-y-2">
-            <p className="font-display text-[clamp(4rem,12vw,8rem)] leading-[0.86] text-ink">
+            <p className="font-script text-[clamp(4.9rem,16vw,9rem)] leading-[0.78] text-ink">
               {hero.names.partnerOne}
             </p>
-            <p className="font-display text-4xl text-gold lg:text-left">
+            <p className="font-display text-4xl italic text-gold lg:text-left">
               &
             </p>
-            <p className="font-display text-[clamp(4rem,12vw,8rem)] leading-[0.86] text-ink">
+            <p className="font-script text-[clamp(4.9rem,16vw,9rem)] leading-[0.78] text-ink">
               {hero.names.partnerTwo}
             </p>
           </div>
@@ -58,10 +58,10 @@ export function HeroSection({
             {hero.eyebrow}
           </p>
 
-          <p className="mx-auto mt-6 hidden max-w-xl text-base leading-7 text-sage-deep/85 md:text-lg lg:mx-0 lg:block">
+          <p className="body-copy mx-auto mt-6 hidden max-w-xl text-sage-deep/85 lg:mx-0 lg:block">
             {hero.intro}
           </p>
-          <p className="mx-auto mt-4 hidden max-w-xl text-base leading-7 text-sage-deep/80 md:text-lg lg:mx-0 lg:block">
+          <p className="body-copy mx-auto mt-4 hidden max-w-xl text-sage-deep/80 lg:mx-0 lg:block">
             {hero.description}
           </p>
 
@@ -166,11 +166,14 @@ export function HeroSection({
           </div>
 
           <div className="mx-auto mt-8 max-w-[24rem] text-center lg:hidden">
-            <blockquote className="text-lg leading-8 text-ink">
+            <blockquote className="body-copy text-ink">
               “{quote.text}”
             </blockquote>
             <p className="mt-3 text-sm italic text-sage-deep/80">
               {quote.citation}
+            </p>
+            <p className="mt-8 font-script text-4xl leading-none text-ink">
+              Haz clic para escuchar nuestra canción
             </p>
             <AudioPlayer audio={hero.audio} />
           </div>

@@ -43,11 +43,18 @@ function App() {
           countdown={countdown}
           calendarUrl={calendarUrl}
         />
-        <CountdownSection countdown={countdown} />
+        <CountdownSection
+          countdown={countdown}
+          date={weddingContent.date}
+          floralIllustration={weddingContent.assets.floralIllustration}
+        />
         <StorySection quote={weddingContent.quote} story={weddingContent.story} />
         <PeopleSection people={weddingContent.people} />
         <ScheduleSection schedule={weddingContent.schedule} />
-        <LocationsSection locations={weddingContent.locations} />
+        <LocationsSection
+          locations={weddingContent.locations}
+          date={weddingContent.date}
+        />
         <DetailsSection details={weddingContent.details} />
         <GallerySection gallery={weddingContent.gallery} />
         <CtaSection
