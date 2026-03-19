@@ -6,6 +6,58 @@ import heroImage from '../assets/reference/hero.jpg'
 import type { WeddingPageData } from '../types/wedding'
 
 /**
+ * ZONA DE EDICION RAPIDA
+ * Cambia estos valores primero.
+ * El resto del archivo reutiliza estas constantes para evitar inconsistencias.
+ */
+const couple = {
+  partnerOne: 'Andrea',
+  partnerTwo: 'Scott',
+}
+
+function capitalize(value: string) {
+  return value.charAt(0).toUpperCase() + value.slice(1)
+}
+
+const eventConfig = {
+  dateIso: '2026-07-25T12:30:00-05:00',
+  time: '12:30 p. m.',
+  city: 'Arequipa, Perú',
+  ceremonyVenue: 'Parroquia San Miguel Arcángel Cayma',
+  receptionVenue: 'Villa Cascada',
+  rsvpDeadlineLabel: '10 de julio de 2026',
+}
+
+const mapLinks = {
+  ceremony: 'https://maps.app.goo.gl/1GwZotKpFYrouEpA7',
+  reception: 'https://maps.app.goo.gl/hECfxK35uhMSMcbVA',
+  lodging: 'https://maps.app.goo.gl/eC8z3qnHDvJuGDWe9?g_st=iw',
+}
+
+const eventDate = new Date(eventConfig.dateIso)
+const eventDateDisplay = capitalize(
+  new Intl.DateTimeFormat('es-PE', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'America/Lima',
+  }).format(eventDate),
+)
+const eventDateMonth = capitalize(
+  new Intl.DateTimeFormat('es-PE', {
+    month: 'short',
+    timeZone: 'America/Lima',
+  })
+    .format(eventDate)
+    .replace('.', ''),
+)
+const eventDateDay = new Intl.DateTimeFormat('es-PE', {
+  day: 'numeric',
+  timeZone: 'America/Lima',
+}).format(eventDate)
+
+/**
  * EDITA ESTE ARCHIVO PARA PERSONALIZAR LA BODA.
  *
  * Recomendación:
@@ -37,10 +89,7 @@ export const weddingContent = {
   hero: {
     eyebrow: 'Nuestra boda',
     intro: 'Con la bendición de Dios, nuestros padres y nuestros seres queridos.',
-    names: {
-      partnerOne: 'Andrea',
-      partnerTwo: 'Scott',
-    },
+    names: couple,
     description:
       'Nos hace muchísima ilusión compartir contigo un día lleno de fe, amor y celebración. Aquí encontrarás cada detalle importante para acompañarnos en esta fecha tan especial.',
     audio: {
@@ -55,13 +104,13 @@ export const weddingContent = {
    * `iso` es la fuente para la cuenta regresiva.
    */
   date: {
-    iso: '2026-07-25T12:30:00-05:00',
-    display: 'Sábado, 25 de julio de 2026',
-    month: 'Jul',
-    day: '25',
-    time: '12:30 p. m.',
-    venue: 'Parroquia San Miguel Arcángel Cayma',
-    city: 'Arequipa, Perú',
+    iso: eventConfig.dateIso,
+    display: eventDateDisplay,
+    month: eventDateMonth,
+    day: eventDateDay,
+    time: eventConfig.time,
+    venue: eventConfig.ceremonyVenue,
+    city: eventConfig.city,
   },
 
   /**
@@ -149,21 +198,21 @@ export const weddingContent = {
   locations: [
     {
       title: 'Ceremonia religiosa',
-      place: 'Villa Cascada',
+      place: eventConfig.ceremonyVenue,
       details: 'Consulta la ruta sugerida y la ubicación exacta en Google Maps.',
-      mapUrl: 'https://maps.app.goo.gl/1GwZotKpFYrouEpA7',
+      mapUrl: mapLinks.ceremony,
     },
     {
       title: 'Recepción',
-      place: 'Salón principal Villa Cascada',
+      place: eventConfig.receptionVenue,
       details: 'Te recomendamos revisar este punto antes de salir para llegar con tranquilidad.',
-      mapUrl: 'https://maps.app.goo.gl/hECfxK35uhMSMcbVA',
+      mapUrl: mapLinks.reception,
     },
     {
       title: 'Hospedaje recomendado',
-      place: 'Zona cercana al evento',
+      place: eventConfig.city,
       details: 'Si vienes desde fuera, aquí tienes una referencia útil para planear tu estadía.',
-      mapUrl: 'https://maps.app.goo.gl/eC8z3qnHDvJuGDWe9?g_st=iw',
+      mapUrl: mapLinks.lodging,
     },
   ],
 
@@ -188,7 +237,7 @@ export const weddingContent = {
     },
     {
       title: 'Confirmación',
-      label: 'Antes del 10 de abril de 2026',
+      label: `Antes del ${eventConfig.rsvpDeadlineLabel}`,
       description:
         'Agradeceremos mucho que nos confirmes con tiempo para organizar cada detalle con cariño y cuidar tu lugar.',
       icon: 'message',
