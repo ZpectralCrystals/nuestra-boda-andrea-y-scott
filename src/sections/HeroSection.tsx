@@ -7,11 +7,18 @@ import {
 } from 'lucide-react'
 import { AudioPlayer } from '../components/shared/AudioPlayer'
 import type { CountdownParts } from '../hooks/useCountdown'
-import type { CtaContent, DateContent, HeroContent, WeddingAssets } from '../types/wedding'
+import type {
+  CtaContent,
+  DateContent,
+  HeroContent,
+  QuoteContent,
+  WeddingAssets,
+} from '../types/wedding'
 
 type HeroSectionProps = {
   hero: HeroContent
   date: DateContent
+  quote: QuoteContent
   assets: WeddingAssets
   cta: CtaContent
   countdown: CountdownParts
@@ -21,24 +28,25 @@ type HeroSectionProps = {
 export function HeroSection({
   hero,
   date,
+  quote,
   assets,
   cta,
   countdown,
   calendarUrl,
 }: HeroSectionProps) {
   return (
-    <section id="inicio" className="section-shell pt-8 md:pt-16">
-      <div className="grid items-center gap-12 lg:grid-cols-[1fr_0.95fr]">
-        <div className="order-2 lg:order-1">
-          <p className="text-sm font-semibold uppercase tracking-[0.4em] text-sage">
+    <section id="inicio" className="section-shell pt-6 md:pt-16">
+      <div className="grid items-center gap-8 md:gap-12 lg:grid-cols-[1fr_0.95fr]">
+        <div className="order-1 text-center lg:text-left">
+          <p className="hidden text-sm font-semibold uppercase tracking-[0.4em] text-sage lg:block">
             {hero.eyebrow}
           </p>
 
-          <div className="mt-6 space-y-2">
+          <div className="mt-5 space-y-1 md:mt-6 md:space-y-2">
             <p className="font-display text-[clamp(4rem,12vw,8rem)] leading-[0.86] text-ink">
               {hero.names.partnerOne}
             </p>
-            <p className="font-display text-center text-4xl text-gold lg:text-left">
+            <p className="font-display text-4xl text-gold lg:text-left">
               &
             </p>
             <p className="font-display text-[clamp(4rem,12vw,8rem)] leading-[0.86] text-ink">
@@ -46,17 +54,21 @@ export function HeroSection({
             </p>
           </div>
 
-          <p className="mt-6 max-w-xl text-base leading-7 text-sage-deep/85 md:text-lg">
+          <p className="mt-5 text-sm font-semibold uppercase tracking-[0.4em] text-sage lg:hidden">
+            {hero.eyebrow}
+          </p>
+
+          <p className="mx-auto mt-6 hidden max-w-xl text-base leading-7 text-sage-deep/85 md:text-lg lg:mx-0 lg:block">
             {hero.intro}
           </p>
-          <p className="mt-4 max-w-xl text-base leading-7 text-sage-deep/80 md:text-lg">
+          <p className="mx-auto mt-4 hidden max-w-xl text-base leading-7 text-sage-deep/80 md:text-lg lg:mx-0 lg:block">
             {hero.description}
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          <div className="mt-8 hidden flex-wrap items-center justify-center gap-4 lg:flex lg:justify-start">
             <a
               href="#confirmacion"
-              className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-ivory transition hover:bg-sage-deep"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-ivory transition hover:bg-sage-deep sm:w-auto"
             >
               <MessageCircleHeart className="h-4 w-4" />
               {cta.rsvpLabel}
@@ -65,16 +77,14 @@ export function HeroSection({
               href={calendarUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-ink/15 bg-white/80 px-6 py-3 text-sm font-semibold text-ink transition hover:border-sage hover:text-sage-deep"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-ink/15 bg-white/80 px-6 py-3 text-sm font-semibold text-ink transition hover:border-sage hover:text-sage-deep sm:w-auto"
             >
               <CalendarDays className="h-4 w-4" />
               Agendar fecha
             </a>
           </div>
 
-          <AudioPlayer audio={hero.audio} />
-
-          <div className="mt-10 grid gap-4 sm:grid-cols-[auto_1fr]">
+          <div className="mt-10 hidden justify-items-center gap-4 sm:grid-cols-[auto_1fr] sm:justify-items-stretch lg:grid">
             <div className="flex w-fit flex-col items-center justify-center rounded-[2rem] border border-white/70 bg-white/80 px-6 py-5 shadow-[var(--shadow-card)] backdrop-blur-xl">
               <span className="text-xs font-semibold uppercase tracking-[0.35em] text-sage">
                 {date.month}
@@ -84,14 +94,14 @@ export function HeroSection({
               </span>
             </div>
 
-            <div className="rounded-[2rem] border border-white/70 bg-white/80 p-6 shadow-[var(--shadow-card)] backdrop-blur-xl">
+            <div className="w-full rounded-[2rem] border border-white/70 bg-white/80 p-6 text-center shadow-[var(--shadow-card)] backdrop-blur-xl sm:text-left">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sage">
                 Reserva la fecha
               </p>
               <p className="mt-3 font-display text-3xl text-ink md:text-4xl">
                 {date.display}
               </p>
-              <div className="mt-4 flex flex-wrap gap-5 text-sm text-sage-deep/80">
+              <div className="mt-4 flex flex-wrap justify-center gap-5 text-sm text-sage-deep/80 sm:justify-start">
                 <span className="inline-flex items-center gap-2">
                   <Clock3 className="h-4 w-4 text-gold" />
                   {date.time}
@@ -106,15 +116,15 @@ export function HeroSection({
 
           <a
             href="#cuenta-regresiva"
-            className="mt-10 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.3em] text-sage transition hover:text-ink"
+            className="mx-auto mt-10 hidden items-center gap-2 text-sm font-semibold uppercase tracking-[0.3em] text-sage transition hover:text-ink lg:mx-0 lg:inline-flex"
           >
             Ver más detalles
             <ChevronDown className="h-4 w-4" />
           </a>
         </div>
 
-        <div className="order-1 lg:order-2">
-          <div className="relative mx-auto max-w-[34rem]">
+        <div className="order-2 lg:order-2">
+          <div className="relative mx-auto max-w-[22rem] sm:max-w-[28rem] lg:max-w-[34rem]">
             <div className="absolute -left-10 top-10 hidden h-40 w-40 rounded-full border border-gold/25 bg-white/45 blur-2xl md:block" />
             <img
               src={assets.floralIllustration}
@@ -131,7 +141,7 @@ export function HeroSection({
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(22,19,15,0.05),rgba(22,19,15,0.36))]" />
               </div>
 
-              <div className="absolute inset-x-8 bottom-8 rounded-[1.7rem] border border-white/30 bg-black/15 p-5 backdrop-blur-md">
+              <div className="absolute inset-x-8 bottom-8 hidden rounded-[1.7rem] border border-white/30 bg-black/15 p-5 backdrop-blur-md md:block">
                 <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/75">
                   Celebración íntima
                 </p>
@@ -145,7 +155,7 @@ export function HeroSection({
               </div>
             </div>
 
-            <div className="absolute -bottom-5 -right-5 rounded-[1.8rem] border border-white/75 bg-white/85 px-5 py-4 shadow-[var(--shadow-card)] backdrop-blur-xl">
+            <div className="relative mt-4 ml-auto hidden w-fit rounded-[1.8rem] border border-white/75 bg-white/85 px-5 py-4 shadow-[var(--shadow-card)] backdrop-blur-xl md:absolute md:-bottom-5 md:-right-5 md:mt-0 lg:block">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-sage">
                 Cuenta regresiva
               </p>
@@ -153,6 +163,16 @@ export function HeroSection({
                 {countdown.days} días
               </p>
             </div>
+          </div>
+
+          <div className="mx-auto mt-8 max-w-[24rem] text-center lg:hidden">
+            <blockquote className="text-lg leading-8 text-ink">
+              “{quote.text}”
+            </blockquote>
+            <p className="mt-3 text-sm italic text-sage-deep/80">
+              {quote.citation}
+            </p>
+            <AudioPlayer audio={hero.audio} />
           </div>
         </div>
       </div>

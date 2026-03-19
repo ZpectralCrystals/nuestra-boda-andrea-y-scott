@@ -103,7 +103,7 @@ type AudioPlayerProps = {
 export function AudioPlayer({ audio }: AudioPlayerProps) {
   if (audio.provider === 'file') {
     return (
-      <div className="mt-6 max-w-xl rounded-[1.75rem] border border-white/70 bg-white/80 p-4 shadow-[var(--shadow-card)] backdrop-blur-xl">
+      <div className="mt-6 w-full max-w-xl rounded-[1.75rem] border border-white/70 bg-white/80 p-4 shadow-[var(--shadow-card)] backdrop-blur-xl">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.32em] text-sage">
             Reproductor
@@ -255,10 +255,10 @@ function YouTubeAudioPlayer({ title, url }: YouTubeAudioPlayerProps) {
   }
 
   return (
-    <div className="mt-6 max-w-xl rounded-[1.75rem] border border-white/70 bg-white/80 p-4 shadow-[var(--shadow-card)] backdrop-blur-xl">
+    <div className="mt-6 w-full max-w-xl rounded-[1.75rem] border border-white/70 bg-white/80 p-4 shadow-[var(--shadow-card)] backdrop-blur-xl">
       <div id={containerId} className="hidden" />
 
-      <div className="flex items-center gap-3">
+      <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
         <button
           type="button"
           onClick={togglePlayback}
@@ -282,7 +282,7 @@ function YouTubeAudioPlayer({ title, url }: YouTubeAudioPlayerProps) {
           </p>
         </div>
 
-        <p className="text-sm font-medium text-sage-deep/75">
+        <p className="self-end text-sm font-medium text-sage-deep/75 sm:self-auto">
           {formatTime(currentTime)} / {formatTime(duration)}
         </p>
       </div>

@@ -37,6 +37,7 @@ function App() {
         <HeroSection
           hero={weddingContent.hero}
           date={weddingContent.date}
+          quote={weddingContent.quote}
           assets={weddingContent.assets}
           cta={weddingContent.cta}
           countdown={countdown}

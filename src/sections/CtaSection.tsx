@@ -34,14 +34,14 @@ export function CtaSection({ cta, floralIllustration }: CtaSectionProps) {
               href={cta.rsvpUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-ivory px-6 py-3 text-sm font-semibold text-ink transition hover:bg-sand"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-ivory px-6 py-3 text-sm font-semibold text-ink transition hover:bg-sand sm:w-auto"
             >
               <MessageCircleHeart className="h-4 w-4" />
               {cta.rsvpLabel}
             </a>
             <a
               href="#ubicaciones"
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-ivory transition hover:border-gold hover:text-gold"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-ivory transition hover:border-gold hover:text-gold sm:w-auto"
             >
               <MapPin className="h-4 w-4" />
               Ver ubicaciones

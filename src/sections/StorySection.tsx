@@ -10,7 +10,7 @@ export function StorySection({ quote, story }: StorySectionProps) {
   return (
     <section className="section-shell mt-24">
       <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
-        <div className="rounded-[2.5rem] border border-white/70 bg-white/80 p-8 shadow-[var(--shadow-card)] backdrop-blur-xl md:p-10">
+        <div className="hidden rounded-[2.5rem] border border-white/70 bg-white/80 p-8 shadow-[var(--shadow-card)] backdrop-blur-xl md:p-10 lg:block">
           <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sage">
             Nuestra inspiración
           </p>

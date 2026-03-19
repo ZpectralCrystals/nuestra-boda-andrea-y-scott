@@ -14,7 +14,7 @@ export function GallerySection({ gallery }: GallerySectionProps) {
         description="Una pequeña colección de momentos que reflejan nuestra historia y la ilusión con la que esperamos este gran día."
       />
 
-      <div className="mt-12 grid auto-rows-[18rem] gap-4 md:grid-cols-3">
+      <div className="mt-12 grid auto-rows-[14rem] gap-4 sm:auto-rows-[18rem] md:grid-cols-3">
         {gallery.map((photo) => (
           <figure
             key={photo.src}

@@ -18,7 +18,7 @@ export function PeopleSection({ people }: PeopleSectionProps) {
         {people.map((person) => (
           <article
             key={person.title}
-            className="rounded-[2rem] border border-white/70 bg-white/70 p-6 shadow-[var(--shadow-card)] backdrop-blur-xl"
+            className="rounded-[2rem] border border-white/70 bg-white/70 p-6 text-center shadow-[var(--shadow-card)] backdrop-blur-xl lg:text-left"
           >
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sage">
               {person.title}
