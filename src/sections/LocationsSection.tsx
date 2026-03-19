@@ -12,7 +12,7 @@ export function LocationsSection({ locations }: LocationsSectionProps) {
       <SectionHeader
         eyebrow="Ubicaciones"
         title="Todo lo que necesitas para llegar"
-        description="Tomé la estructura del sitio de referencia y la convertí en tarjetas prácticas con accesos directos a mapa."
+        description="Te compartimos las ubicaciones más importantes para que puedas organizar tu llegada y acompañarnos sin contratiempos."
       />
 
       <div className="mt-12 grid gap-5 lg:grid-cols-3">

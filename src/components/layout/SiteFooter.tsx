@@ -11,8 +11,7 @@ export function SiteFooter({ names }: SiteFooterProps) {
         {names.partnerOne} & {names.partnerTwo}
       </p>
       <p className="mt-3 text-sm text-sage-deep/70">
-        Landing hecha en React, TypeScript, Vite y Tailwind CSS, lista para
-        personalizar con tu propia información.
+        Gracias por acompañarnos en este momento tan importante de nuestras vidas.
       </p>
     </footer>
   )

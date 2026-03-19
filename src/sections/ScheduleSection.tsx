@@ -18,7 +18,7 @@ export function ScheduleSection({ schedule }: ScheduleSectionProps) {
       <SectionHeader
         eyebrow="Agenda"
         title="Así viviremos el gran día"
-        description="Una línea de tiempo clara ayuda a tus invitados a orientarse rápidamente. Puedes reordenar o ampliar estos bloques desde el archivo de datos."
+        description="Hemos preparado cada momento con mucho cariño para compartir una celebración llena de fe, alegría y gratitud."
       />
 
       <div className="mt-12 grid gap-5 lg:grid-cols-3">

@@ -25,8 +25,8 @@ export function CtaSection({ cta, floralIllustration }: CtaSectionProps) {
             Nos encantará celebrarlo contigo
           </h2>
           <p className="mt-5 text-base leading-7 text-white/75 md:text-lg">
-            Esta sección quedó preparada como cierre fuerte de la landing, con
-            una llamada clara a la acción para confirmar asistencia.
+            Tu presencia hará este día aún más especial. Gracias por acompañarnos
+            con tanto cariño en una fecha que recordaremos para siempre.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

@@ -12,7 +12,7 @@ export function CountdownSection({ countdown }: CountdownSectionProps) {
         <SectionHeader
           eyebrow="Faltan"
           title="Los días para decir sí"
-          description="Una cuenta regresiva elegante y lista para editar. Solo cambia la fecha en el archivo de datos y todo se actualiza automáticamente."
+          description="Cada día nos acerca más al momento de celebrar juntos una fecha que llevaremos siempre en el corazón."
         />
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">

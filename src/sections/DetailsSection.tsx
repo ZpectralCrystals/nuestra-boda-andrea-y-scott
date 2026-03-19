@@ -18,7 +18,7 @@ export function DetailsSection({ details }: DetailsSectionProps) {
       <SectionHeader
         eyebrow="Detalles"
         title="Lo importante, de un vistazo"
-        description="Aquí reuní los bloques más útiles para una boda: vestimenta, regalos y confirmación. Todo está listo para que lo adaptes."
+        description="Aquí encontrarás información importante para acompañarnos con tranquilidad y disfrutar plenamente de la celebración."
       />
 
       <div className="mt-12 grid gap-5 lg:grid-cols-3">

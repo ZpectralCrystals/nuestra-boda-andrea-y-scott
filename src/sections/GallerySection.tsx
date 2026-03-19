@@ -10,8 +10,8 @@ export function GallerySection({ gallery }: GallerySectionProps) {
     <section id="galeria" className="section-shell mt-24">
       <SectionHeader
         eyebrow="Galería"
-        title="Una propuesta visual lista para reemplazar"
-        description="Dejé una composición editorial con imágenes locales para que la página se vea completa desde el primer minuto. Luego puedes sustituirlas por tus propias fotos."
+        title="Nuestros recuerdos"
+        description="Una pequeña colección de momentos que reflejan nuestra historia y la ilusión con la que esperamos este gran día."
       />
 
       <div className="mt-12 grid auto-rows-[18rem] gap-4 md:grid-cols-3">

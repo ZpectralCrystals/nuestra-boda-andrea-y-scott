@@ -11,7 +11,7 @@ export function PeopleSection({ people }: PeopleSectionProps) {
       <SectionHeader
         eyebrow="Con quienes amamos"
         title="Bendiciones y compañía"
-        description="Esta sección ya está armada para que reemplaces nombres o roles cuando quieras, sin rehacer el diseño."
+        description="Agradecemos profundamente a quienes han sido parte de nuestro camino y nos acompañan con su amor en este día tan especial."
       />
 
       <div className="mt-10 grid gap-4 lg:grid-cols-4">
