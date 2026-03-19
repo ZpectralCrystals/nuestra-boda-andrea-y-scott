@@ -4,8 +4,8 @@ import {
   Clock3,
   MapPin,
   MessageCircleHeart,
-  Music4,
 } from 'lucide-react'
+import { AudioPlayer } from '../components/shared/AudioPlayer'
 import type { CountdownParts } from '../hooks/useCountdown'
 import type { CtaContent, DateContent, HeroContent, WeddingAssets } from '../types/wedding'
 
@@ -72,32 +72,7 @@ export function HeroSection({
             </a>
           </div>
 
-          <div className="mt-6 max-w-xl rounded-[1.75rem] border border-white/70 bg-white/80 p-4 shadow-[var(--shadow-card)] backdrop-blur-xl">
-            <div className="flex items-center gap-3">
-              <div className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-sage/12 text-sage">
-                <Music4 className="h-5 w-5" />
-              </div>
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.32em] text-sage">
-                  Reproductor
-                </p>
-                <p className="font-display text-2xl leading-none text-ink">
-                  {hero.audio.title}
-                </p>
-              </div>
-            </div>
-
-            <audio className="mt-4 w-full" controls preload="none">
-              <source src={hero.audio.src} type={hero.audio.mimeType} />
-              Tu navegador no soporta audio HTML5.
-            </audio>
-
-            <p className="mt-3 text-xs leading-6 text-sage-deep/70">
-              Reemplaza el archivo en{' '}
-              <span className="font-semibold">public/media/song.mp3</span> para
-              cambiar la canción.
-            </p>
-          </div>
+          <AudioPlayer audio={hero.audio} />
 
           <div className="mt-10 grid gap-4 sm:grid-cols-[auto_1fr]">
             <div className="flex w-fit flex-col items-center justify-center rounded-[2rem] border border-white/70 bg-white/80 px-6 py-5 shadow-[var(--shadow-card)] backdrop-blur-xl">

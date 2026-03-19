@@ -13,11 +13,20 @@ export type HeroContent = {
   intro: string
   names: CoupleNames
   description: string
-  audio: {
-    title: string
-    src: string
-    mimeType: string
-  }
+  audio: FileAudioSource | YouTubeAudioSource
+}
+
+export type FileAudioSource = {
+  provider: 'file'
+  title: string
+  src: string
+  mimeType: string
+}
+
+export type YouTubeAudioSource = {
+  provider: 'youtube'
+  title: string
+  url: string
 }
 
 export type DateContent = {

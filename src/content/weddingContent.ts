@@ -11,7 +11,8 @@ import type { WeddingPageData } from '../types/wedding'
  * Recomendación:
  * 1. Cambia primero nombres, fecha y links.
  * 2. Luego actualiza textos, agenda y ubicaciones.
- * 3. Finalmente reemplaza las imágenes importadas al inicio.
+ * 3. Si usas YouTube, pega el link completo en `hero.audio.url`.
+ * 4. Finalmente reemplaza las imágenes importadas al inicio.
  *
  * Cuando más adelante conectemos backend o CMS,
  * esta misma estructura nos servirá como contrato de datos.
@@ -43,9 +44,9 @@ export const weddingContent = {
     description:
       'Nos hace muchísima ilusión compartir contigo un día lleno de fe, amor y celebración. Aquí encontrarás cada detalle importante para acompañarnos en esta fecha tan especial.',
     audio: {
+      provider: 'youtube',
       title: 'Nuestra canción',
-      src: '/media/song.mp3',
-      mimeType: 'audio/mpeg',
+      url: 'https://www.youtube.com/watch?v=AZHXsYlZLIs',
     },
   },
 
@@ -54,7 +55,7 @@ export const weddingContent = {
    * `iso` es la fuente para la cuenta regresiva.
    */
   date: {
-    iso: '2026-04-25T12:30:00-05:00',
+    iso: '2026-07-25T12:30:00-05:00',
     display: 'Sábado, 25 de julio de 2026',
     month: 'Jul',
     day: '25',
