@@ -95,7 +95,7 @@ export const weddingContent = {
     audio: {
       provider: 'youtube',
       title: 'Nuestra canción',
-      url: 'https://www.youtube.com/watch?v=AZHXsYlZLIs',
+      url: 'https://music.youtube.com/watch?v=rMdSSWZxHyQ&si=ZPINkFuv1bGXwmEH',
     },
   },
 
