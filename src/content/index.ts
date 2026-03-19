@@ -1,0 +1,1 @@
+export { weddingContent } from './weddingContent'
